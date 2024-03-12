@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>animate demo</title>
+  <style>
+  div {
+    position: absolute;
+    background-color: #abc;
+    left: 50px;
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+<body>
+ 
+<button id="left">&laquo;</button>
+<button id="right">&raquo;</button>
+<button id="up">up</button>
+<button id="down">down</button>
+<div class="block"></div>
+ 
+<script>
+$( "#right" ).on( "click", function() {
+  $( ".block" ).animate({ "left": "+=50px" }, "slow" );
+});
+ 
+$( "#left" ).on( "click", function(){
+  $( ".block" ).animate({ "left": "-=50px" }, "slow" );
+});
+
+$( "#up" ).on( "click", function() {
+  $( ".block" ).animate({ "top": "-=50px" }, "slow" );
+});
+ 
+$( "#down" ).on( "click", function(){
+  $( ".block" ).animate({ "bottom": "-=50px" }, "slow" );
+});
+
+</script>
+ 
+</body>
+</html>

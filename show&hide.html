@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show & Hide</title>
+    <script src="jquery.js"></script>
+    <style>
+    .box{
+        background-color: aqua;
+        height: 200px;
+        width: 200px;
+        border: solid 1px black;
+        margin: 20px;
+    }
+</style>
+
+<script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $("#b1").hide();
+        });
+        $("#show").click(function(){
+            $("#b1").show();
+        });
+        $("#tog").click(function(){
+            $("#b1").toggle();
+        });
+
+    });
+</script>
+
+</head>
+<body>
+    <center>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button> 
+        <button id="tog">Show/Hide</button>
+        <div class="box" id="b1"> </div>
+
+    </center>
+ 
+</body>
+</html>
